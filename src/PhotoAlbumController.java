@@ -4,17 +4,36 @@ import java.util.Date;
 import java.awt.Image;
 import javax.imageio.ImageIO;
 
+/**
+ * PhotoAlbumController Class
+ *
+ * This class serves as the controller in the MVC pattern, managing the interaction
+ * between the PhotoAlbumModel and PhotoAlbumView. It handles user actions, such as
+ * adding, deleting, and navigating through photos, and updates the model and view
+ * accordingly.
+ *
+ * Author: Nathan Dinh
+ * Date: October 24, 2024
+ */
 
 public class PhotoAlbumController {
     private PhotoAlbumModel model;
     private PhotoAlbumView view;
     private AlbumIterator iterator;
 
+    /**
+     * Constructs a PhotoAlbumController with the specified model and view.
+     * Initializes event listeners for user interactions and updates the photo list.
+     *
+     * @param model the PhotoAlbumModel instance managing the photo data.
+     * @param view  the PhotoAlbumView instance providing the user interface.
+     */
     public PhotoAlbumController(PhotoAlbumModel model, PhotoAlbumView view) {
         this.model = model;
         this.view = view;
         this.iterator = model.iterator(); // Initialize the iterator
 
+        // Register event listeners
         view.getAddButton().addActionListener(e -> addPhoto());
         view.getDeleteButton().addActionListener(e -> deletePhoto());
         view.getNextButton().addActionListener(e -> nextPhoto());
@@ -24,6 +43,9 @@ public class PhotoAlbumController {
         updatePhotoList();
     }
 
+    /**
+     * Opens a file chooser dialog to allow the user to add a new photo to the album.
+     */
     private void addPhoto() {
         // Open file chooser to select a photo
         JFileChooser fileChooser = new JFileChooser();
@@ -42,12 +64,18 @@ public class PhotoAlbumController {
         }
     }
 
+    /**
+     * Prompts the user to enter the name of a photo to delete from the album.
+     */
     private void deletePhoto() {
         String name = JOptionPane.showInputDialog("Enter photo name to delete:");
         model.deletePhoto(name);
         updatePhotoList();
     }
 
+    /**
+     * Advances to the next photo in the album, if available, and updates the view.
+     */
     private void nextPhoto() {
         if (iterator.hasNext()) {
             Photo photo = iterator.next();
@@ -57,6 +85,9 @@ public class PhotoAlbumController {
         }
     }
 
+    /**
+     * Moves to the previous photo in the album, if available, and updates the view.
+     */
     private void previousPhoto() {
         if (iterator.hasPrevious()) {
             Photo photo = iterator.previous();
@@ -66,6 +97,9 @@ public class PhotoAlbumController {
         }
     }
 
+    /**
+     * Changes the sorting strategy based on user selection from the dropdown menu.
+     */
     private void changeSorting() {
         String selected = (String) view.getSortByComboBox().getSelectedItem();
         if (selected.equals("Name")) model.setSortingStrategy(new SortByName());
@@ -74,6 +108,9 @@ public class PhotoAlbumController {
         updatePhotoList();
     }
 
+    /**
+     * Updates the photo list displayed in the view and resets the iterator.
+     */
     private void updatePhotoList() {
         DefaultListModel<Photo> photoListModel = view.getPhotoListModel();
         photoListModel.clear();
@@ -86,6 +123,11 @@ public class PhotoAlbumController {
         }
     }
 
+    /**
+     * Displays the specified photo in the view, including its name and thumbnail.
+     *
+     * @param photo the Photo object to display.
+     */
     private void displayPhoto(Photo photo) {
         try {
             ImageIcon imageIcon = new ImageIcon(ImageIO.read(new File(photo.getFilePath()))

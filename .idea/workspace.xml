@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d512ee37-cbf8-401a-8ecf-cff6dc0c230e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AlbumIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortByDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortByName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortBySize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AlbumIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlbumIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Photo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PhotoAlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PhotoAlbumIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhotoAlbumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhotoAlbumSorting.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortingStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,7 @@
       <updated>1729112543315</updated>
       <workItem from="1729112544345" duration="9715000" />
       <workItem from="1729501608358" duration="621000" />
-      <workItem from="1729812402392" duration="2887000" />
+      <workItem from="1729812402392" duration="5012000" />
     </task>
     <servers />
   </component>
