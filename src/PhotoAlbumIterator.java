@@ -1,10 +1,6 @@
-import java.util.Iterator;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.function.Consumer;
 
-public class PhotoAlbumIterator implements Iterator<Photo> {
-
+public class PhotoAlbumIterator implements AlbumIterator {
     private List<Photo> photos;
     private int currentIndex = 0;
 
@@ -14,22 +10,35 @@ public class PhotoAlbumIterator implements Iterator<Photo> {
 
     @Override
     public boolean hasNext() {
-        return currentIndex < photos.size();
+        return currentIndex < photos.size() - 1;
+    }
+
+    @Override
+    public boolean hasPrevious() {
+        return currentIndex > 0;
+    }
+
+    @Override
+    public Photo current() {
+        if (photos.isEmpty()) {
+            return null;  // Handle edge case: empty album
+        }
+        return photos.get(currentIndex);
     }
 
     @Override
     public Photo next() {
-        if(!hasNext()) throw new NoSuchElementException();
-        return photos.get(currentIndex++);
+        if (hasNext()) {
+            currentIndex++;
+        }
+        return current();
     }
 
     @Override
-    public void remove() {
-        Iterator.super.remove();
-    }
-
-    @Override
-    public void forEachRemaining(Consumer<? super Photo> action) {
-        Iterator.super.forEachRemaining(action);
+    public Photo previous() {
+        if (hasPrevious()) {
+            currentIndex--;
+        }
+        return current();
     }
 }
