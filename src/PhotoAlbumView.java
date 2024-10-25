@@ -120,7 +120,7 @@ public class PhotoAlbumView extends JFrame {
                 label.setIcon(thumbnail);
                 label.setHorizontalTextPosition(JLabel.NORTH); // Align text to the top of the thumbnail
             } catch (Exception e) {
-                label.setText(photo.getName() + " (Thumbnail not available)");
+                label.setText(photo.getName());
             }
 
             return label;

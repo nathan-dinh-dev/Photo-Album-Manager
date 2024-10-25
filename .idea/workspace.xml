@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d512ee37-cbf8-401a-8ecf-cff6dc0c230e" name="Changes" comment="" />
+    <list default="true" id="d512ee37-cbf8-401a-8ecf-cff6dc0c230e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhotoAlbumView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhotoAlbumView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +51,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PhotoAlbumApp.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -81,7 +85,9 @@
       <updated>1729112543315</updated>
       <workItem from="1729112544345" duration="9715000" />
       <workItem from="1729501608358" duration="621000" />
-      <workItem from="1729812402392" duration="5404000" />
+      <workItem from="1729812402392" duration="7210000" />
+      <workItem from="1729819880463" duration="1386000" />
+      <workItem from="1729821457013" duration="65000" />
     </task>
     <servers />
   </component>
